@@ -68,7 +68,7 @@ chrome.runtime.onMessage.addListener((message: PopupMessage, sender) => {
 
 function changeRedditURL(params: URLParameters) {
   const { host, pathname, protocol, search } = params;
-  if (host.includes("www.reddit.com")) {
+  if (host.includes("reddit.com")) {
     if (!pathname.includes("media") && !pathname.includes("gallery")) {
       const modifiedURL = `${protocol}//redlib.catsarch.com${pathname}${search}`;
       console.log(modifiedURL);
