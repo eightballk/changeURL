@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "changeURL",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An extension to change url after loading some specific pages",
   "action": {
     "default_popup": "/public/popup/popup.html"
@@ -9,7 +9,7 @@
   "permissions": ["storage", "activeTab"],
   "content_scripts": [
     {
-      "matches": ["https://*.reddit.com/*", "https://example.com/*", "https://x.com/*"],
+      "matches": ["https://*.reddit.com/*", "https://x.com/*", "https://xcancel.com/*"],
       "js": ["/public/dist/Content.js"]
     }
   ]

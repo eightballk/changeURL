@@ -70,12 +70,12 @@ function changeRedditURL(params: URLParameters) {
   const { host, pathname, protocol, search } = params;
   if (host.includes("www.reddit.com")) {
     if (!pathname.includes("media") && !pathname.includes("gallery")) {
-      const modifiedURL = `${protocol}//${host.replace("www", "old")}${pathname}${search}`;
+      const modifiedURL = `${protocol}//redlib.catsarch.com${pathname}${search}`;
       console.log(modifiedURL);
       location.replace(modifiedURL);
     }
   } else {
-    console.log("no www in url");
+    console.log("not a reddit host");
     if (location.pathname.includes("/over18")) clickContinueButton();
   }
 }
@@ -83,13 +83,13 @@ function changeRedditURL(params: URLParameters) {
 function changeTwitterURL(params: URLParameters) {
   const { host, pathname, protocol, search } = params;
   let modifiedURL: string = "";
-  if (host.includes("x.com")) {
+  if (host.includes("x.com") || host.includes("xcancel.com")) {
     if (pathname.includes("/i/flow/login")) {
       let url: string = `${protocol}${host}${pathname}${search}`;
       modifiedURL = decodeURL(url);
       location.replace(modifiedURL);
     } else {
-      modifiedURL = `${protocol}//${host.replace("x", "xcancel")}${pathname}${search}`;
+      modifiedURL = `${protocol}//nitter.cf${pathname}${search}`;
       console.log(modifiedURL);
       location.replace(modifiedURL);
     }
