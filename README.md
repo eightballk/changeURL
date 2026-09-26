@@ -10,9 +10,10 @@ This browser extension changes the URL of Reddit and X (Twitter) to bypass login
 
 ## Acknowledgments
 
-Big thanks to the developers of Nitter for allowing to bypass twitter's login.
+Big thanks to the developers of Nitter and RedLib for allowing to bypass twitter's and reddit's login.
 
 - **[Nitter](https://github.com/zedeus/nitter)**
+- **[RedLib](https://github.com/redlib-org/redlib-instances)**
 
 ## Features
 
